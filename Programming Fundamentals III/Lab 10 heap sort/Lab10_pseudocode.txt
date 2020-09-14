@@ -1,0 +1,41 @@
+     start
+	Create a generic type parameter
+	Function buildHeap, parameters: generic array, integer variables for array size and current node
+	   Declare int variable for the root position equaling the current node parameter
+	   Declare int variables for the left and right child positions
+
+	   If the left child is larger than the root
+	      than the root position now equals the left child position
+	   endif
+
+	   If the right child is larger than the root
+	      than the root position now equals the right child position
+	   endif
+
+	   If the root position no longer equals the current node
+	      than swap the element in the array at the current node with the element in the array at the root
+	      Recursively call the buildHeap function
+	   endif
+	EndFunction
+
+	Create a generic type parameter
+	Function heapSort, parameters: generic array, variable of type int for size of array
+	   For loop from half the array size to 0 to build the heap
+	      Call the buildHeap function
+	   endfor
+
+	   For loop where i = array size - 1 to 0 to take away element from heap
+	      swap the first element in the array with the element at i
+	      Call the buildHeap function on the reduced heap
+	   endfor
+	EndFunction
+
+	Function main
+	   Declare and initialize arrays of type int, double, and string
+	   Declare variable of type int for determining the size of the arrays
+
+	   Call the heapSort function for each array
+
+	   Output the sorted arrays
+	EndFunction
+     stop

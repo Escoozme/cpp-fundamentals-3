@@ -1,0 +1,20 @@
+     start
+	Function num POINTER 'extend', parameters: 3 arrays of type double = price, quantity, amount
+	   for loop from ZERO to TEN using num i
+	      have amount at i equal price at i multiplied by quantity at i
+	   endfor
+	   return amount array
+	EndFunction
+
+	Function main
+	   declare 3 arrays of type double = price, quantity, amount
+
+	   declare pointer variable that points to 'extend' function
+
+	   for loop from ZERO to TEN using num i
+	      output dereferenced (pointer variable plus i)
+	   endfor
+
+	   return ZERO
+	EndFunction
+     stop

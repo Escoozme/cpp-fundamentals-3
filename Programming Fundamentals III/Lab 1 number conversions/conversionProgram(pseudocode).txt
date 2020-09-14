@@ -1,0 +1,92 @@
+start
+     Function void decimalToHex(const string number)
+	string tempNumber = number
+	num hexValue[32] = { 0 }
+	num quotient = stoi(tempNumber)
+	num counter = -1
+	for int i = 0; quotient > 0; ++i, ++counter
+	   hexValue[i] = quotient MOD 16
+	   quotient = quotient / 16
+	endfor
+	for int i = counter; i >= 0; --i
+	   if hexValue[i] is greater than 9
+	      output hexValue[i] + 55 as a character
+	   else
+	      output hexValue[i]
+	   endif
+	endfor
+     EndFunction
+
+     Function void decimalToBinary(const string number)
+	string tempNumber = number
+	num binaryValue[32] = { 0 }
+	num quotient = stoi(tempNumber)
+	num counter = -1
+	for int i = 0; quotient > 0; ++i, ++counter
+	   binaryValue[i] = quotient MOD 2
+	   quotient = quotient / 2
+	endfor
+	for int i = counter; i >= 0; --i
+	      output binaryValue[i]
+	endfor
+     EndFunction
+
+     Function int characterToDecimal(char ch)
+	ch = toupper(ch)
+	if 'A' is less than or equal to ch AND ch is less than or equal to 'F'
+	   return 10 + ch - 'A'
+	else
+	   return ch - '0'
+	endif
+     EndFunction
+
+     Function int hexToDecimal(const string number)
+	num decimalValue = 0
+	for int i = 0; i < number.size(); ++i
+	   decimalValue = decimalValue * 16 + characterToDecimal(number[i])
+	endfor
+	return decimalValue
+     EndFunction
+
+     Function void hexToBinary(const string number)
+	string tempNumber = to_string(hexToDecimal(number))
+	decimalToBinary(tempNumber)
+     EndFunction
+
+     Function int binaryToDecimal(const string number)
+	num decimalValue = 0
+	for int i = 0; i < number.size(); ++i
+	   decimalValue = decimalValue * 2 + charToDecimal(number[i])
+	endfor
+	return decimalValue
+     EndFunction
+
+     Function void binaryToHex(const string number)
+	string tempNumber = to_string(binaryToDecimal(number))
+	decimalToHex(tempNumber)
+     EndFunction
+
+     Function int main
+	string number
+	char letter
+
+	output information about the program
+
+	input number
+
+	while number is NOT EQUAL to "0"
+	   input letter
+
+	   if letter is EQUAL to 'H' then output decimalToHex(number)
+	   if letter is EQUAL to 'B' then output decimalToBinary(number)
+	   if letter is EQUAL to 'D' then output hexToDecimal(number)
+ 	   if letter is EQUAL to 'X' then output hexToBinary(number)
+	   if letter is EQUAL to 'N' then output binaryToDecimal(number)
+	   if letter is EQUAL to 'Y' then output binaryToHex(number)
+
+	   input number
+	endwhile
+
+	return 0
+     EndFunction
+stop

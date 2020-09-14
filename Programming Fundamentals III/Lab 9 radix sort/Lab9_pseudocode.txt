@@ -1,0 +1,32 @@
+     start
+	Function countSort, parameters: array of type int, variable of type int to hold current digit number
+	   Declare integer array to hold sorted integers
+	   Declare integer array of size 10 to hold the count of numbers ending in current digit
+
+	   For loop from 0 to 10,000 to increment number of occurences of integers ending in current digit in the count array
+
+	   For loop from 1 to 10 to change the count array to contain actual position of the current digit in the sorted array
+
+	   For loop from 9,999 to 0 that builds the sorted array
+
+	   For loop from 0 to 10,000 that copies the sorted array to the original array of integers so that it holds the sorted integers
+	EndFunction
+
+	Function radixSort, parameters: array of type int
+	   Declare integer variable to hold largest number in array to know max digits
+
+	   For loop where i = 1 and is multiplied by 10 each loop, until largest number divided by i is no longer greater than 0
+	      Call countSort function
+	   endfor
+	EndFunction
+
+	Function main
+	   Declare integer array to hold 10,000 integers
+
+	   Populate array with random integers
+
+	   Call radixSort function
+
+	   Output sorted array
+	EndFunction
+     stop

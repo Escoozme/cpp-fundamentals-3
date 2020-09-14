@@ -1,0 +1,21 @@
+     start
+
+	Create template T
+
+	Function T 'swapValues', parameters: two variables of type T
+	   swap the values in the two variables
+	EndFunction
+
+	Function main
+	   Declare and initialize two integer, two double, and two string variables
+
+	   Call the swapValues function, passing both integers
+	   Call the swapValues function, passing both doubles
+	   Call the swapValues function, passing both strings
+
+	   Output all 6 variables, showing the swapped values they hold
+
+	   return ZERO
+	EndFunction
+
+     stop

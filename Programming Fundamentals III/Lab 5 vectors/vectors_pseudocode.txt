@@ -1,0 +1,23 @@
+     start
+	Declare vectors for course id, credit hours, and grades
+	Declare variable for sum of credit hours
+
+	Open course.txt and student.txt files
+
+	Using a while loop
+	   read in information from course.txt file to courseId and credit hours vectors
+	   read in information from student.txt file to grades vector
+	   increment sum of credit hours variable
+	endwhile
+	
+	Close course.txt and student.txt files
+
+	Declare G.P.A. variable
+
+	Using a for loop from ZERO to SIZE of grades vector
+	   calculate G.P.A. using the formula: GPA = sum of (points * hours) / sum of credit hours
+	endfor
+
+	Output the course ids and their corresponding grades for the student
+	Output the student's G.P.A.
+     stop

@@ -1,0 +1,18 @@
+     start
+	Function void 'reverseDisplay', parameters: constant variable of type string
+	   if statement where the size of the string must be greater than ZERO
+	      output the last character in the string
+	      call this function again, reducing size of the string by ONE element from the end
+	   endif
+	EndFunction
+
+	Function main
+	   Declare string variable
+
+	   input string
+
+	   call 'reverseDisplay' function
+
+	   return ZERO
+	EndFunction
+     stop

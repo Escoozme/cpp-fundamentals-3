@@ -1,0 +1,43 @@
+     start
+
+	Function void 'count', parameters: constant string, num array counts, num SIZE
+	   For loop from ZERO to LENGTH of string using num i
+	      If statement to check for number in string at sub i
+	         if true, increment element in counts array based on current number in string
+	      endif
+	   endfor
+
+	   For loop from ZERO to SIZE using num i
+	      output counts array at sub i \n
+	   endfor
+	EndFunction
+
+	Function num POINTER 'count', parameters: constant string
+	   static num array 'counts' with storage size of TEN
+
+	   For loop from ZERO to LENGTH of string using num i
+	      If statement to check for number in string at sub i
+	         if true, increment element in counts array based on current number in string
+	      endif
+	   endfor
+
+	   return counts array
+	EndFunction
+
+	Function main
+	   constant num 'SIZE' = 10
+	   num array 'counts' with storage size of SIZE
+	   string = "put string here, preferably with numbers"
+
+	   num POINTER 'pCounts' = function count(string)
+
+	   For loop from ZERO to SIZE using num i
+	      output dereferenced (pCounts + i) \n
+	   endfor
+
+	   void function count(string, counts array, SIZE)
+
+	   return ZERO
+	EndFunction
+
+     stop

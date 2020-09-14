@@ -1,0 +1,28 @@
+     start
+	declare variables for number of candidates, total votes, winner of election, and
+	position of winner in array
+
+	input the number of candidates
+
+	create dynamic arrays for name of candidates, vote count for each candidate, and
+	percent of total votes for each candidate
+
+	using a for loop from 0 to the number of candidates
+	   input candidate name to appropriate array and vote count for candidate
+	   accumulate total votes variable
+	endfor
+
+	have winner variable equal the vote count array at element 0
+
+	using a for loop from 1 to the number of candidates
+	   determine who received the most votes using vote count array, and winner variable
+	endfor
+
+	using a for loop from 0 to the number of candidates
+	   calculate percentage of votes won by each candidate using percent of total votes array
+	endfor
+
+	output, as a table, the names of candidates and their vote counts, followed by the percentage
+	of votes they received
+	output the total votes in the election
+     stop

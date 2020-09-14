@@ -1,0 +1,34 @@
+     start
+	Function string 'decimalToHex', parameters: variable of type integer
+
+	   Declare a static string variable to hold hexadecimal value as a string
+	   Declare a string variable to hold modulated value as a letter from 'A' to 'F'
+	   Declare a variable to hold value of inputted integer MODULATED by SIXTEEN
+
+	   if statement where inputted integer must be greater than ZERO
+
+	      if statement where modulated value must be less than or equal to NINE
+	         insert modulated number value as a string into static string
+	      else if modulated value is from TEN TO FIFTEEN
+	         insert modulated letter value as a string into static string
+	      endif
+
+	      return decimalToHex function with integer variable divided by SIXTEEN
+	   else
+	      return static string variable
+	   endif
+
+	EndFunction
+
+	Function main
+
+	   Declare integer variable
+
+	   input integer
+
+	   Call decimalToHex function
+
+	   return ZERO
+
+	EndFunction
+     stop
